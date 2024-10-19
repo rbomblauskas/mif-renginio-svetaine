@@ -77,7 +77,7 @@ function App() {
           Rėmėjai
         </h1>
         <div className="flex flex-col items-center justify-center w-full relative">
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <a href="https://lnm.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
               <img src={istoriju_namai_logo} alt="logo" />
             </a>
@@ -85,7 +85,7 @@ function App() {
               <img src={vda_logo} alt="logo" />
             </a>
           </div>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <a href="https://keistuoliai.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
               <img src={keistuoliu_teatras_logo} alt="logo" />
             </a>
