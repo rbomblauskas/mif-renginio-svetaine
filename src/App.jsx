@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import bg1 from './assets/bg1.jpg'
 import bg3 from './assets/bg3.png'
 import logo from './assets/logo.png'
@@ -6,7 +5,47 @@ import istoriju_namai_logo from './assets/istoriju_namai.png'
 import keistuoliu_teatras_logo from './assets/keistuoliu_teatras.png'
 import lb_logo from './assets/lietuvos_bankas.png'
 import vda_logo from './assets/vda.png'
+import { useState, useEffect } from "react";
+
 function App() {
+  const calculateTimeLeft = () => {
+    const targetDate = new Date("2024-10-24T00:00:00");
+    const now = new Date();
+    const difference = targetDate - now;
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (time) => {
+    return time.toString().padStart(2, "0");
+  };
+
+  const getTime = () => {
+    return Object.values(timeLeft).length ? `${formatTime(timeLeft.days)}:${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}` : '00:00:00:00';
+  }
+
+
   return (
     <div className="w-full">
       <div
@@ -32,25 +71,25 @@ function App() {
           Iki renginio liko:
         </h1>
         <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[130px] sm:text-[80px] text-[46px] font-western mb-24">
-          00:00:00
+          {getTime()}
         </h1>
         <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[86px] sm:text-[52px] text-[40px] font-western mb-4">
           Rėmėjai
         </h1>
-        <div class="flex flex-col items-center justify-center w-full relative">
-          <div class="flex">
-            <a href="https://lnm.lt/" class="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+        <div className="flex flex-col items-center justify-center w-full relative">
+          <div className="flex">
+            <a href="https://lnm.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
               <img src={istoriju_namai_logo} alt="logo" />
             </a>
-            <a href="https://vda.lrv.lt/lt/" class="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+            <a href="https://vda.lrv.lt/lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
               <img src={vda_logo} alt="logo" />
             </a>
           </div>
-          <div class="flex">
-            <a href="https://keistuoliai.lt/" class="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+          <div className="flex">
+            <a href="https://keistuoliai.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
               <img src={keistuoliu_teatras_logo} alt="logo" />
             </a>
-            <a href="https://www.lb.lt/" class="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+            <a href="https://www.lb.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
               <img src={lb_logo} alt="logo" />
             </a>
           </div>
