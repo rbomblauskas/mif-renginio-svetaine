@@ -77,7 +77,7 @@ function App() {
           Rėmėjai
         </h1>
         <div className="flex flex-col items-center justify-center w-full relative">
-          <div className="flex flex-wrap flex-col md:flex-row">
+          <div className="flex flex-wrap flex-col md:flex-row items-center justify-center">
             <a href="https://lnm.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
               <img src={istoriju_namai_logo} alt="logo" />
             </a>
