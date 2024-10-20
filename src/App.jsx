@@ -47,7 +47,7 @@ function App() {
 
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <div
         className="min-h-[512px] w-full flex justify-center items-center"
         style={{ backgroundImage: `url(${bg1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -64,7 +64,7 @@ function App() {
       </div>
 
       <div
-        className="min-h-[40vh] w-full flex justify-center items-center flex-col"
+        className="min-h-[40vh] w-full h-full flex justify-start items-center flex-col"
         style={{ backgroundImage: `url(${bg3})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'rgb(23, 18, 40)' }}
       >
         <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[86px] sm:text-[52px] text-[40px] font-western mb-4">
