@@ -5,6 +5,7 @@ import istoriju_namai_logo from './assets/istoriju_namai.png'
 import keistuoliu_teatras_logo from './assets/keistuoliu_teatras.png'
 import lb_logo from './assets/lietuvos_bankas.png'
 import vda_logo from './assets/vda.png'
+import lemon_logo from './assets/lemon.png'
 import { useState, useEffect } from "react";
 
 function App() {
@@ -90,6 +91,9 @@ function App() {
               </a>
               <a href="https://www.lb.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
                 <img src={lb_logo} alt="logo" />
+              </a>
+              <a href="https://www.lemongym.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+                <img src={lemon_logo} alt="logo" />
               </a>
             </div>
           </div>
