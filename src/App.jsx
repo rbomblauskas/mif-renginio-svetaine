@@ -49,14 +49,14 @@ function App() {
   return (
     <div className="w-full h-full">
       <div
-        className="min-h-[512px] w-full flex justify-center items-center"
-        style={{ backgroundImage: `url(${bg1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="min-h-[512px] w-full flex justify-center items-center md:min-h-[940px]"
+        style={{ backgroundImage: `url(${bg1})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}
       >
         <div className="text-center text-white">
           <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[130px] sm:text-[80px] text-[46px] font-western mb-4">
             Micius
           </h1>
-          <img src={logo} className="w-[80px] md:w-[128px] mx-auto" />
+          <img src={logo} className="w-[80px] md:w-[128px] mx-auto card-hover" />
           <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[130px] sm:text-[80px] text-[46px] font-western mb-4">
             Teksaso reindžeris
           </h1>
@@ -64,32 +64,34 @@ function App() {
       </div>
 
       <div
-        className="min-h-[40vh] w-full h-full flex justify-start items-center flex-col"
+        className="min-h-[40vh] w-full h-full flex justify-start flex-col items-center"
         style={{ backgroundImage: `url(${bg3})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'rgb(23, 18, 40)' }}
       >
-        <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[86px] sm:text-[52px] text-[40px] font-western mb-4">
-          Iki renginio liko:
-        </h1>
-        <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[130px] sm:text-[80px] text-[46px] font-western mb-24">
-          {getTime()}
-        </h1>
-        <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[86px] sm:text-[52px] text-[40px] font-western mb-4">
-          Rėmėjai
-        </h1>
-        <div className="flex flex-col items-center justify-center w-full relative">
-          <div className="flex flex-wrap flex-col md:flex-row items-center justify-center">
-            <a href="https://lnm.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
-              <img src={istoriju_namai_logo} alt="logo" />
-            </a>
-            <a href="https://vda.lrv.lt/lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
-              <img src={vda_logo} alt="logo" />
-            </a>
-            <a href="https://keistuoliai.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
-              <img src={keistuoliu_teatras_logo} alt="logo" />
-            </a>
-            <a href="https://www.lb.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
-              <img src={lb_logo} alt="logo" />
-            </a>
+        <div className="xl:max-w-[1280px] w-full flex justify-start items-center flex-col">
+          <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[86px] sm:text-[52px] text-[40px] font-western mb-4">
+            Iki renginio liko:
+          </h1>
+          <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[130px] sm:text-[80px] text-[46px] font-western mb-24">
+            {getTime()}
+          </h1>
+          <h1 className="[text-shadow:_3px_3px_0px_rgb(130_126_145_/_100%)] md:text-[86px] sm:text-[52px] text-[40px] font-western mb-4">
+            Rėmėjai
+          </h1>
+          <div className="flex flex-col items-center justify-center w-full relative">
+            <div className="flex flex-wrap flex-col md:flex-row items-center justify-center">
+              <a href="https://lnm.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+                <img src={istoriju_namai_logo} alt="logo" />
+              </a>
+              <a href="https://vda.lrv.lt/lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+                <img src={vda_logo} alt="logo" />
+              </a>
+              <a href="https://keistuoliai.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+                <img src={keistuoliu_teatras_logo} alt="logo" />
+              </a>
+              <a href="https://www.lb.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+                <img src={lb_logo} alt="logo" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
