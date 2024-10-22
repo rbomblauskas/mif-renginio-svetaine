@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-10-24T00:00:00");
+    const targetDate = new Date('2024-10-24T19:00:00+03:00');
     const now = new Date();
     const difference = targetDate - now;
 
