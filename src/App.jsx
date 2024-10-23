@@ -43,7 +43,7 @@ function App() {
   };
 
   const getTime = () => {
-    return Object.values(timeLeft).length ? `${formatTime(timeLeft.days)}:${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}` : '00:00:00:00';
+    return Object.values(timeLeft).length ? `${formatTime(timeLeft.days)} : ${formatTime(timeLeft.hours)} : ${formatTime(timeLeft.minutes)} : ${formatTime(timeLeft.seconds)}` : '00:00:00:00';
   }
 
 
