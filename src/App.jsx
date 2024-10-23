@@ -92,7 +92,7 @@ function App() {
               <a href="https://www.lb.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
                 <img src={lb_logo} alt="logo" />
               </a>
-              <a href="https://www.lemongym.lt/" className="w-[200px] md:w-[300px] object-contain card-hover md:m-10 m-5" target="_blank">
+              <a href="https://www.lemongym.lt/" className="w-[100px] md:w-[200px] object-contain card-hover md:m-10 m-5" target="_blank">
                 <img src={lemon_logo} alt="logo" />
               </a>
             </div>
